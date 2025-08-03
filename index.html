@@ -8,85 +8,69 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
       text-align: center;
-      padding: 40px;
     }
-    h1 {
-      color: #333;
+    header {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .logo {
-      font-size: 36px;
+      font-size: 32px;
       font-weight: bold;
     }
     .v { color: orange; }
     .d { color: white; background-color: #333; padding: 2px 6px; border-radius: 4px; }
     .c { color: green; }
+    main {
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 24px;
+      color: #333;
+    }
     .btn {
       display: inline-block;
-      padding: 12px 24px;
-      margin: 10px;
+      margin: 15px;
+      padding: 14px 28px;
       background-color: #333;
       color: #fff;
       text-decoration: none;
       border-radius: 8px;
-      font-weight: bold;
+      font-size: 16px;
     }
     .btn:hover {
       background-color: #555;
     }
-    .section {
-      margin-top: 30px;
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
     }
   </style>
 </head>
 <body>
 
-  <div class="logo"><span class="v">V</span>en<span class="d">d</span><span class="c">Ça</span></div>
-
-  <h1>Bienvenue sur VendsÇa 🇨🇮</h1>
-  <p>La plateforme simple pour vendre et acheter en Côte d'Ivoire</p>
-
-  <div class="section">
-    <a href="https://forms.gle/TON-LIEN-ICI" class="btn">📤 Publier une annonce</a>
-    <a href="https://forms.gle/TON-LIEN-ICI" class="btn">📋 Voir les offres</a>
-  </div>
-
-  <div class="section">
-    <p>100% gratuit. Simple. Accessible depuis ton téléphone. 🧡🤍💚</p>
-  </div>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VendsÇa - Petites annonces locales</title>
-  <style>
-    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
-    header { background: #ff6600; color: white; text-align: center; padding: 1em; }
-    .container { max-width: 800px; margin: auto; padding: 2em; text-align: center; }
-    .btn {
-      background: #ff6600;
-      color: white;
-      padding: 1em 2em;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 8px;
-      display: inline-block;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
   <header>
-    <h1>Bienvenue sur VendsÇa</h1>
-    <p>Vendez, donnez ou proposez vos services localement à Abidjan 🇨🇮</p>
+    <div class="logo"><span class="v">V</span>en<span class="d">d</span><span class="c">Ça</span></div>
   </header>
-  <div class="container">
-    <p>Déposez votre annonce en cliquant ci-dessous :</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScPkVVXcWtrPVxi96tMq0H5bgEFOu4ruj9EuprXdFrKMjaCLw/viewform" class="btn" target="_blank">Déposer une annonce</a>
-  </div>
+
+  <main>
+    <h1>Bienvenue sur VendsÇa 🇨🇮</h1>
+    <p>La plateforme simple pour vendre rapidement en Côte d'Ivoire</p>
+
+    <div>
+      <a class="btn" href="https://forms.gle/TON_LIEN_FORMULAIRE">📤 Déposer une annonce</a>
+      <a class="btn" href="https://diamed01.github.io/Vend-a/annonces.html">👀 Voir les annonces</a>
+    </div>
+  </main>
+
+  <footer>
+    VendsÇa © 2025 – Développé avec ❤️ pour la Côte d'Ivoire
+  </footer>
+
 </body>
 </html>
