@@ -98,54 +98,61 @@
     </div>
   </div>
 </body>
-</html><!DOCTYPE html><html lang="fr">
+<!DOCTYPE html><html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Déposer une annonce - VendsÇa</title>
+  <title>VendsÇa</title>
+  <link rel="icon" href="https://emoji.gg/assets/emoji/2599-money.png" type="image/png">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
     }
-    header {
-      background: orange;
+    header, footer {
+      background-color: orange;
       color: white;
-      padding: 20px;
+      padding: 1rem;
       text-align: center;
-      font-size: 1.8em;
+      font-weight: bold;
+      font-size: 1.8rem;
     }
-    .tagline {
+    .top-btn {
+      display: block;
+      margin: 1rem auto;
+      background-color: orange;
+      color: white;
+      padding: 1rem;
+      font-size: 1rem;
+      font-weight: bold;
       text-align: center;
-      font-size: 1em;
-      margin: 15px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      width: 80%;
     }
     iframe {
       width: 100%;
-      height: 1600px;
+      height: 1800px;
       border: none;
     }
-    .retour {
+    .back {
+      display: block;
       text-align: center;
-      margin: 20px;
-    }
-    .retour a {
-      background: orange;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
+      margin: 2rem 0;
+      font-size: 1rem;
+      color: orange;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <header>VendsÇa</header>
-  <div class="tagline">Gagne de l’argent en déposant tes affaires en 2 minutes !</div>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc7brzvsYej3PvKLG908Gyky1KAah88QNTlBQgGpADuK-HEoA/viewform?embedded=true" allowfullscreen></iframe>
-  <div class="retour">
-    <a href="index.html">⬅ Retour à l’accueil</a>
-  </div>
+  <header>VendsÇa</header><a href="https://docs.google.com/forms/d/e/1FAIpQLSc7brzvsYej3PvKLG908Gyky1KAah88QNTlBQgGpADuK-HEoA/viewform" class="top-btn">+ Déposer une annonce</a>
+
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc7brzvsYej3PvKLG908Gyky1KAah88QNTlBQgGpADuK-HEoA/viewform?embedded=true">Chargement…</iframe><a href="index.html" class="back">⬅ Retour à l'accueil</a>
+
+  <footer>VendsÇa</footer>
 </body>
 </html>
