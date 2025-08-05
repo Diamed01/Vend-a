@@ -1,94 +1,108 @@
 
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html><html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VendsÇa - Annonces</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", sans-serif;
       background-color: #f9f9f9;
       color: #333;
-    }
-    header {
-      background-color: orange;
-      color: white;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .slogan {
-      text-align: center;
-      font-size: 16px;
-      margin: 15px;
-    }
-    .button {
-      display: block;
-      width: 80%;
-      margin: 20px auto;
-      padding: 15px;
-      background-color: orange;
-      color: white;
-      text-align: center;
-      font-size: 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .card {
-      background-color: white;
-      border-radius: 10px;
-      padding: 15px;
-      margin: 15px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .card img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 6px;
-    }
-    .category {
-      font-size: 12px;
-      color: gray;
-    }
-    .title {
-      font-weight: bold;
-      font-size: 18px;
-      margin: 5px 0;
-    }
-    .price {
-      color: #555;
-      font-size: 15px;
-    }
+    }header {
+  background-color: orange;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.subheader {
+  text-align: center;
+  margin: 20px 10px;
+  font-size: 1.1em;
+}
+
+.cta-button {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 30px;
+  padding: 15px 25px;
+  background-color: orange;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.annonces {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.annonce {
+  background-color: white;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.categorie {
+  font-size: 0.9em;
+  color: #888;
+}
+
+.titre {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.prix {
+  font-size: 1em;
+  color: #555;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #888;
+}
+
   </style>
 </head>
 <body>
-  <header>VendsÇa</header>
-  <div class="slogan">
+  <header>VendsÇa</header>  <div class="subheader">
     Vends, achète ou propose tes services facilement, gratuitement et localement.
-  </div>
+  </div><a class="cta-button" href="https://docs.google.com/forms/d/e/1FAIpQLSc7brzvsYej3PvKLG908Gyky1KAah88QNTlBQgGpADuK-HEoA/viewform" target="_blank">+ Déposer une annonce</a>
 
-  <a class="button" href="https://forms.gle/5xptJ9wACJbZPx3ZA" target="_blank">+ Déposer une annonce</a>
+  <div class="annonces">
+    <div class="annonce">
+      <div class="categorie">Chaussures</div>
+      <div class="titre">Chaussures neuves</div>
+      <div class="prix">10 000 FCFA - Abidjan</div>
+    </div><div class="annonce">
+  <div class="categorie">Téléphone</div>
+  <div class="titre">Smartphone Samsung</div>
+  <div class="prix">50 000 FCFA - Yopougon</div>
+</div>
 
-  <div class="card">
-    <div class="category">👟 Chaussures</div>
-    <div class="title">Chaussures neuves</div>
-    <div class="price">10 000 FCFA - Abidjan</div>
-  </div>
+<div class="annonce">
+  <div class="categorie">Service</div>
+  <div class="titre">Service de livraison</div>
+  <div class="prix">Disponible partout à Abidjan</div>
+</div>
 
-  <div class="card">
-    <div class="category">📱 Téléphone</div>
-    <div class="title">Smartphone Samsung</div>
-    <div class="price">50 000 FCFA - Yopougon</div>
-  </div>
-
-  <div class="card">
-    <div class="category">🚚 Service</div>
-    <div class="title">Service de livraison</div>
-    <div class="price">Disponible partout à Abidjan</div>
-  </div>
+  </div>  <footer>Retour en haut - VendsÇa</footer>
 </body>
 </html>
