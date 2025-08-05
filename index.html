@@ -1,98 +1,86 @@
-<!DOCTYPE html><html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Annonces - VendsÇa</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="xGNu8600RolBScsTeW4El4bDwb21R1rsrUB5frUfyFM" />
+  <title>VendÇa - Petites annonces autour de toi</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f2f2f2;
+      background: #f8f8f8;
     }
     header {
-      background-color: #ff7f00;
+      background-color: orange;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .tagline {
+      background-color: #ff6a00;
       color: white;
       text-align: center;
-      padding: 1rem;
+      padding: 8px;
+      font-size: 14px;
     }
-    main {
-      padding: 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    .annonce {
-      background: white;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      padding: 1rem;
+    .ad {
+      background-color: white;
+      border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px;
+      padding: 15px;
     }
-    .annonce img {
-      max-width: 100%;
-      border-radius: 5px;
-      margin-bottom: 0.5rem;
+    .ad p {
+      margin: 5px 0;
     }
-    .annonce h2 {
-      margin: 0.2rem 0;
-      color: #333;
-    }
-    .annonce p {
-      margin: 0.2rem 0;
-    }
-    .whatsapp {
+    .btn {
       display: inline-block;
-      margin-top: 0.5rem;
-      background: #25D366;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #25D366;
       color: white;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
+      border: none;
       border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
     }
-    .retour {
-      display: block;
-      text-align: center;
-      margin: 2rem auto;
-      text-decoration: none;
-      background: #555;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 5px;
-      width: fit-content;
+    .demo-note {
+      font-size: 12px;
+      color: gray;
+      margin-top: 5px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>📢 Annonces disponibles</h1>
-    <p>Vends facilement autour de toi. Clique, contacte, vends !</p>
-  </header>
-  <main><div class="annonce">
-  <img src="https://example.com/photo1.jpg" alt="Télévision Samsung 55" />
-  <h2>📺 Télévision Samsung 55" – 85 000 FCFA</h2>
-  <p><strong>Ville :</strong> Cocody - Angré</p>
-  <p>Écran LED 4K, très bon état, avec télécommande.</p>
-  <a class="whatsapp" href="https://wa.me/2250700000000" target="_blank">Contacter sur WhatsApp</a>
-</div>
+  <header>VendÇa</header>
+  <div class="tagline">Vends facilement autour de toi. Clique, contacte, vends !</div>
 
-<div class="annonce">
-  <img src="https://example.com/photo2.jpg" alt="Chaise de bureau" />
-  <h2>🪑 Chaise de bureau – 25 000 FCFA</h2>
-  <p><strong>Ville :</strong> Yopougon - Maroc</p>
-  <p>Chaise confortable pour le télétravail. Hauteur réglable.</p>
-  <a class="whatsapp" href="https://wa.me/2250550432187" target="_blank">Contacter sur WhatsApp</a>
-</div>
+  <div class="ad">
+    <h2>📺 Télévision Samsung 55" – 85 000 FCFA</h2>
+    <p><strong>Ville :</strong> Cocody - Angré</p>
+    <p>Écran LED 4K, très bon état, avec télécommande.</p>
+    <a class="btn" href="#">Contacter sur WhatsApp</a>
+    <p class="demo-note">🟧 Annonce de démonstration</p>
+  </div>
 
-<div class="annonce">
-  <img src="https://example.com/photo3.jpg" alt="iPhone 11 128Go" />
-  <h2>📱 iPhone 11 128Go – 250 000 FCFA</h2>
-  <p><strong>Ville :</strong> Treichville - Arras</p>
-  <p>iPhone débloqué, excellent état, vendu avec chargeur.</p>
-  <a class="whatsapp" href="https://wa.me/2250109876543" target="_blank">Contacter sur WhatsApp</a>
-</div>
+  <div class="ad">
+    <h2>🪑 Chaise de bureau – 25 000 FCFA</h2>
+    <p><strong>Ville :</strong> Yopougon - Maroc</p>
+    <p>Chaise confortable pour le télétravail. Hauteur réglable.</p>
+    <a class="btn" href="#">Contacter sur WhatsApp</a>
+    <p class="demo-note">🟧 Annonce de démonstration</p>
+  </div>
 
-<a class="retour" href="index.html">← Retour à l'accueil</a>
-
-  </main>
+  <div class="ad">
+    <h2>📱 iPhone 11 128Go – 250 000 FCFA</h2>
+    <p><strong>Ville :</strong> Treichville - Arras</p>
+    <p>iPhone débloqué, excellent état, vendu avec chargeur.</p>
+    <a class="btn" href="#">Contacter sur WhatsApp</a>
+    <p class="demo-note">🟧 Annonce de démonstration</p>
+  </div>
 </body>
 </html>
