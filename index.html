@@ -99,45 +99,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VendsÇa</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>VendsÇa</h1>
-      <p>Vends, achète ou propose tes services facilement, gratuitement et localement.</p>
-      <a class="cta-button" href="#formulaire">+ Déposer une annonce</a>
-    </header><main>
-  <section class="ads">
+<!DOCTYPE html><html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VendsÇa</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: orange;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .cta-button {
+            background-color: orange;
+            color: white;
+            padding: 15px 25px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
+        }
+        .ads {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .ad {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+        .category {
+            font-size: 0.9em;
+            color: gray;
+            margin-bottom: 5px;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .location {
+            margin-top: 5px;
+            font-size: 0.9em;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            margin: 30px 0 10px;
+        }
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>VendsÇa</header>
+    <div class="container">
+        <p>Vends, achète ou propose tes services facilement, gratuitement et localement.</p>
+        <a class="cta-button" href="https://docs.google.com/forms/d/e/1FAIpQLSc7brzvsYej3PvKLG908Gyky1KAah88QNTlBQgGpADuK-HEoA/viewform" target="_blank">+ Déposer une annonce</a>
+    </div><div class="ads">
     <div class="ad">
-      <span class="category">👟Chaussures</span>
-      <h3>Chaussures neuves</h3>
-      <p>10 000 FCFA - Abidjan</p>
+        <div class="category">👟 Chaussures</div>
+        <div class="title">Chaussures neuves</div>
+        <div class="location">10 000 FCFA - Abidjan</div>
     </div>
     <div class="ad">
-      <span class="category">📱Téléphone</span>
-      <h3>Smartphone Samsung</h3>
-      <p>50 000 FCFA - Yopougon</p>
+        <div class="category">📱 Téléphone</div>
+        <div class="title">Smartphone Samsung</div>
+        <div class="location">50 000 FCFA - Yopougon</div>
     </div>
     <div class="ad">
-      <span class="category">🛵Service</span>
-      <h3>Service de livraison</h3>
-      <p>Disponible partout à Abidjan</p>
+        <div class="category">🚚 Service</div>
+        <div class="title">Service de livraison</div>
+        <div class="location">Disponible partout à Abidjan</div>
     </div>
-  </section>
-
-  <section id="formulaire">
-    <h2>VendsÇa</h2>
-    <p>Gagne de l’argent en déposant tes affaires en 2 minutes !</p>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc7brzvsYej3PvKLG908Gyky1KAah88QNTlBQgGpADuK-HEoA/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
-    <p style="text-align:center; margin-top: 20px;">
-      <a href="#top" class="cta-button">⬅ Retour à l'accueil</a>
-    </p>
-  </section>
-</main>
+</div>
 
 <footer>
-  <p>&copy; 2025 VendsÇa. Tous droits réservés.</p>
+    <a href="https://diamed01.github.io">← Retour à l'accueil</a>
 </footer>
 
-  </body>
+</body>
 </html>
