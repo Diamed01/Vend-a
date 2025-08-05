@@ -1,105 +1,95 @@
-<!DOCTYPE html><html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="xGNu8600RolBScsTeW4El4bDwb21R1rsrUB5frUfyFM" />
-  <title>VendÇa - Petites annonces autour de toi</title>
+  <title>VendsÇa - Petites Annonces</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f8f8f8;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
     }
     header {
-      background-color: orange;
+      background: #ff7a00;
       color: white;
       padding: 20px;
       text-align: center;
-      font-size: 24px;
+      font-size: 2em;
       font-weight: bold;
     }
     .tagline {
-      background-color: #ff6a00;
-      color: white;
       text-align: center;
-      padding: 8px;
-      font-size: 14px;
+      font-size: 1em;
+      padding: 10px;
+      background-color: #fff3e0;
+    }
+    .button-container {
+      text-align: center;
+      margin: 20px;
+    }
+    .button-container a {
+      background: #ff7a00;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .ad-container {
+      max-width: 800px;
+      margin: auto;
+      padding: 10px;
     }
     .ad {
-      background-color: white;
+      background: white;
       border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      margin: 20px;
       padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .category {
+      font-size: 0.85em;
+      background: #e0e0e0;
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 5px;
+      margin-bottom: 5px;
+    }
+    .ad h3 {
+      margin: 10px 0 5px;
     }
     .ad p {
-      margin: 5px 0;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background-color: #25D366;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .demo-note {
-      font-size: 12px;
-      color: gray;
-      margin-top: 5px;
-    }
-    .category-badge {
-      background-color: #eee;
-      border-radius: 5px;
-      padding: 2px 8px;
-      font-size: 12px;
-      color: #333;
-      display: inline-block;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-    .footer-links {
-      text-align: center;
-      margin: 30px 0;
-    }
-    .footer-links a {
-      color: #ff6a00;
-      font-weight: bold;
-      text-decoration: none;
-      margin: 0 10px;
+      margin: 4px 0;
     }
   </style>
 </head>
 <body>
-  <header>VendÇa</header>
-  <div class="tagline">Vends facilement autour de toi. Clique, contacte, vends !</div>  <div class="ad">
-    <div class="category-badge">Électronique</div>
-    <h2>📺 Télévision Samsung 55" – 85 000 FCFA</h2>
-    <p><strong>Ville :</strong> Cocody - Angré</p>
-    <p>Écran LED 4K, très bon état, avec télécommande.</p>
-    <a class="btn" href="#">Contacter sur WhatsApp</a>
-    <p class="demo-note">🟧 Annonce de démonstration</p>
-  </div>  <div class="ad">
-    <div class="category-badge">Maison</div>
-    <h2>🪑 Chaise de bureau – 25 000 FCFA</h2>
-    <p><strong>Ville :</strong> Yopougon - Maroc</p>
-    <p>Chaise confortable pour le télétravail. Hauteur réglable.</p>
-    <a class="btn" href="#">Contacter sur WhatsApp</a>
-    <p class="demo-note">🟧 Annonce de démonstration</p>
-  </div>  <div class="ad">
-    <div class="category-badge">Téléphones</div>
-    <h2>📱 iPhone 11 128Go – 250 000 FCFA</h2>
-    <p><strong>Ville :</strong> Treichville - Arras</p>
-    <p>iPhone débloqué, excellent état, vendu avec chargeur.</p>
-    <a class="btn" href="#">Contacter sur WhatsApp</a>
-    <p class="demo-note">🟧 Annonce de démonstration</p>
-  </div>  <div class="footer-links">
-    <a href="/Vend-a">🏠 Retour à l'accueil</a>
-    <a href="https://forms.gle/1U4Z4owGEQHgzLzGA" target="_blank">📝 Déposer une annonce</a>
+  <header>VendsÇa</header>
+  <div class="tagline">Vends facilement autour de toi</div>
+  <div class="button-container">
+    <a href="depot.html">📝 Déposer une annonce</a>
+  </div>
+  <div class="ad-container">
+    <div class="ad">
+      <div class="category">Téléphones</div>
+      <h3>📱 iPhone 11 Pro - 250 000 FCFA</h3>
+      <p><strong>Lieu :</strong> Yopougon</p>
+      <p>État neuf, 128 Go, avec chargeur.</p>
+    </div>
+    <div class="ad">
+      <div class="category">Maison</div>
+      <h3>🛋 Canapé 5 places - 100 000 FCFA</h3>
+      <p><strong>Lieu :</strong> Cocody</p>
+      <p>Tissu propre, bon état général.</p>
+    </div>
+    <div class="ad">
+      <div class="category">Électronique</div>
+      <h3>📺 Télé Samsung 42" - 60 000 FCFA</h3>
+      <p><strong>Lieu :</strong> Treichville</p>
+      <p>Fonctionne très bien. Prête à l’emploi.</p>
+    </div>
   </div>
 </body>
+</html>
 </html>
