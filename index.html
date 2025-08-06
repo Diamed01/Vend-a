@@ -8,101 +8,78 @@
     body {
       margin: 0;
       font-family: "Segoe UI", sans-serif;
-      background-color: #f9f9f9;
+      background: #f9f9f9;
       color: #333;
-    }header {
-  background-color: orange;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  font-size: 2em;
-  font-weight: bold;
-}
-
-.subheader {
-  text-align: center;
-  margin: 20px 10px;
-  font-size: 1.1em;
-}
-
-.cta-button {
-  display: block;
-  width: fit-content;
-  margin: 0 auto 30px;
-  padding: 15px 25px;
-  background-color: orange;
-  color: white;
-  font-size: 1.1em;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.annonces {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 10px;
-}
-
-.annonce {
-  background-color: white;
-  width: 100%;
-  max-width: 500px;
-  margin: 10px 0;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.categorie {
-  font-size: 0.9em;
-  color: #888;
-}
-
-.titre {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin: 5px 0;
-}
-
-.prix {
-  font-size: 1em;
-  color: #555;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  color: #888;
-}
-
+    }
+    header {
+      background: orange;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .container {
+      padding: 20px;
+      text-align: center;
+    }
+    .btn-annonce {
+      background-color: orange;
+      color: white;
+      padding: 15px 25px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 20px 0;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .annonce {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin: 20px auto;
+      text-align: left;
+    }
+    .annonce img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    footer {
+      background: #eee;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #555;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <header>VendsÇa</header>  <div class="subheader">
-    Vends, achète ou propose tes services facilement, gratuitement et localement.
-  </div><a class="cta-button" href="https://docs.google.com/forms/d/e/1FAIpQLSc7brzvsYej3PvKLG908Gyky1KAah88QNTlBQgGpADuK-HEoA/viewform" target="_blank">+ Déposer une annonce</a>
-
-  <div class="annonces">
-    <div class="annonce">
-      <div class="categorie">Chaussures</div>
-      <div class="titre">Chaussures neuves</div>
-      <div class="prix">10 000 FCFA - Abidjan</div>
-    </div><div class="annonce">
-  <div class="categorie">Téléphone</div>
-  <div class="titre">Smartphone Samsung</div>
-  <div class="prix">50 000 FCFA - Yopougon</div>
+  <header>VendsÇa</header>
+  <div class="container">
+    <p>Vends, achète ou propose tes services facilement, gratuitement et localement.</p>
+    <a class="btn-annonce" href="https://forms.gle/3AqTTZfthPgrm6Rz6" target="_blank">+ Déposer une annonce</a><!-- Annonce démo -->
+<div class="annonce">
+  <img src="https://via.placeholder.com/400x200.png?text=Chaussures+neuves" alt="Chaussures neuves">
+  <h3>Chaussures neuves</h3>
+  <p>Taille 42, jamais portées. Prix : 10 000 FCFA</p>
+  <p>Contact WhatsApp : 07 00 00 00 00</p>
 </div>
 
 <div class="annonce">
-  <div class="categorie">Service</div>
-  <div class="titre">Service de livraison</div>
-  <div class="prix">Disponible partout à Abidjan</div>
+  <img src="https://via.placeholder.com/400x200.png?text=T%C3%A9l%C3%A9phone+Samsung" alt="Téléphone Samsung">
+  <h3>Téléphone Samsung</h3>
+  <p>Galaxy A12 en bon état, avec chargeur. Prix : 35 000 FCFA</p>
+  <p>Contact WhatsApp : 01 11 22 33 44</p>
 </div>
 
-  </div>  <footer>Retour en haut - VendsÇa</footer>
+  </div>
+  <footer>
+    <p><strong>Mentions légales :</strong> VendsÇa est une plateforme gratuite de petites annonces. Nous ne sommes pas responsables des transactions entre utilisateurs.</p>
+    <p><a href="#">Conditions d'utilisation</a> | <a href="#">Politique de confidentialité</a></p>
+  </footer>
 </body>
 </html>
