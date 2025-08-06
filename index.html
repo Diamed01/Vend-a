@@ -1,85 +1,115 @@
-
 <!DOCTYPE html><html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VendsÇa - Annonces</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VendsÇa – Dépôt et consultation d'annonces</title>
   <style>
     body {
       margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: #f9f9f9;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
       color: #333;
     }
     header {
-      background: orange;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 2em;
-      font-weight: bold;
-    }
-    .container {
-      padding: 20px;
-      text-align: center;
-    }
-    .btn-annonce {
       background-color: orange;
       color: white;
-      padding: 15px 25px;
-      font-size: 1em;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin: 20px 0;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+    .button {
       display: inline-block;
+      padding: 12px 24px;
+      margin: 20px 10px;
+      font-size: 18px;
+      color: white;
+      background-color: orange;
       text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: darkorange;
     }
     .annonce {
-      background: white;
-      padding: 15px;
+      background-color: white;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      max-width: 500px;
+      padding: 10px;
       margin: 20px auto;
+      max-width: 400px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: left;
     }
     .annonce img {
       max-width: 100%;
-      border-radius: 8px;
+      border-radius: 6px;
+    }
+    .annonce h3 {
+      margin: 10px 0 5px;
+      font-size: 20px;
+    }
+    .annonce p {
+      margin: 5px 0;
     }
     footer {
-      background: #eee;
+      margin-top: 40px;
+      background-color: #eee;
       padding: 20px;
-      font-size: 0.9em;
+      font-size: 14px;
       color: #555;
       text-align: center;
+    }
+    footer a {
+      color: #555;
+      text-decoration: none;
+      margin: 0 10px;
     }
   </style>
 </head>
 <body>
   <header>VendsÇa</header>
-  <div class="container">
-    <p>Vends, achète ou propose tes services facilement, gratuitement et localement.</p>
-    <a class="btn-annonce" href="https://forms.gle/3AqTTZfthPgrm6Rz6" target="_blank">+ Déposer une annonce</a><!-- Annonce démo -->
+  <main>
+    <p>Vends, achète ou propose tes services facilement, gratuitement et localement en Côte d'Ivoire.</p><a href="https://docs.google.com/forms/d/e/1FAIpQLSc7brzvsYej3PvKLG908Gyky1KAah88QNTlBQgGpADuK-HEoA/viewform?usp=dialog" class="button" target="_blank">+ Déposer une annonce</a>
+
+<!-- Annonces de démonstration -->
 <div class="annonce">
-  <img src="https://via.placeholder.com/400x200.png?text=Chaussures+neuves" alt="Chaussures neuves">
+  <img src="https://via.placeholder.com/400x200.png?text=Chaussures" alt="Chaussures">
   <h3>Chaussures neuves</h3>
-  <p>Taille 42, jamais portées. Prix : 10 000 FCFA</p>
-  <p>Contact WhatsApp : 07 00 00 00 00</p>
+  <p>Prix : 10 000 FCFA</p>
+  <p>Contact : 07 00 00 00 00</p>
 </div>
-
 <div class="annonce">
-  <img src="https://via.placeholder.com/400x200.png?text=T%C3%A9l%C3%A9phone+Samsung" alt="Téléphone Samsung">
-  <h3>Téléphone Samsung</h3>
-  <p>Galaxy A12 en bon état, avec chargeur. Prix : 35 000 FCFA</p>
-  <p>Contact WhatsApp : 01 11 22 33 44</p>
+  <img src="https://via.placeholder.com/400x200.png?text=iPhone+11" alt="iPhone">
+  <h3>iPhone 11</h3>
+  <p>Bon état, débloqué</p>
+  <p>Prix : 120 000 FCFA</p>
+  <p>Contact : 01 11 22 33 44</p>
 </div>
 
-  </div>
-  <footer>
-    <p><strong>Mentions légales :</strong> VendsÇa est une plateforme gratuite de petites annonces. Nous ne sommes pas responsables des transactions entre utilisateurs.</p>
-    <p><a href="#">Conditions d'utilisation</a> | <a href="#">Politique de confidentialité</a></p>
-  </footer>
+<a href="index.html" class="button">← Retour à l'accueil</a>
+
+  </main>  <footer>
+    <div>
+      <a href="#mentions">Mentions légales</a> |
+      <a href="#conditions">Conditions d'utilisation</a>
+    </div>
+    <div style="margin-top: 15px;">
+      &copy; 2025 VendsÇa – Tous droits réservés
+    </div>
+  </footer>  <!-- Mentions légales intégrées -->  <section id="mentions" style="padding: 20px; background: #fff;">
+    <h3>Mentions légales</h3>
+    <p><strong>Éditeur :</strong> Diarra Hamed</p>
+    <p><strong>Statut :</strong> Particulier</p>
+    <p><strong>Hébergeur :</strong> GitHub Pages, GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA</p>
+  </section>  <!-- Conditions d'utilisation intégrées -->  <section id="conditions" style="padding: 20px; background: #fff;">
+    <h3>Conditions d'utilisation</h3>
+    <p>Les annonces publiées sur ce site sont sous la responsabilité de leurs auteurs. VendsÇa n’est pas responsable des transactions entre utilisateurs.</p>
+    <p>Aucune garantie n’est fournie quant à l’authenticité ou à la qualité des biens proposés.</p>
+  </section>
 </body>
 </html>
