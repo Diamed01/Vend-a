@@ -4,60 +4,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>VendsÇa – Déposer une annonce</title>
-  <meta name="robots" content="noindex, follow" />
+  <title>VendsÇa — Déposer une annonce</title>
+  <meta name="description" content="Dépose une annonce en 2 minutes sur VendsÇa. Simple, gratuit et local." />
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#ff7f00" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23ff7f00'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-size='58' font-family='Arial' fill='white'%3E%C3%A7%3C/text%3E%3C/svg%3E">
   <style>
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-      background:#f9f9f9;
-      color:#333;
+    :root{
+      --orange:#ff7f00;
+      --bg:#f5f5f7;
+      --text:#222;
+      --white:#fff;
     }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    /* Top bar */
     .topbar{
       position:sticky; top:0; z-index:10;
-      display:flex; gap:12px; align-items:center;
-      padding:12px 16px;
-      background:orange; color:#fff;
-      box-shadow:0 2px 8px rgba(0,0,0,.08);
+      display:flex; gap:.5rem; align-items:center; justify-content:space-between;
+      padding:.75rem; background:var(--orange); color:var(--white);
+      border-bottom:2px solid #e56f00;
     }
+    .topbar h1{margin:0; font-size:1.1rem; font-weight:800; letter-spacing:.2px}
+    .actions{display:flex; gap:.5rem}
     .btn{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:10px 14px;
-      border-radius:999px;
-      background:#fff; color:#333;
-      text-decoration:none; font-weight:bold;
-      border:2px solid #fff;
+      display:inline-flex; align-items:center; gap:.5rem;
+      background:var(--white); color:var(--orange); border:none;
+      padding:.55rem .9rem; border-radius:999px; font-weight:700;
+      text-decoration:none; box-shadow:0 1px 0 rgba(0,0,0,.06);
     }
-    .btn.cta{
-      background:#ff7f00; color:#fff; border-color:#ff7f00;
+    .btn:active{transform:translateY(1px)}
+    .btn-outline{
+      background:transparent; color:#fff; border:2px solid #fff;
     }
+
     .wrap{
-      max-width:960px; margin:16px auto; padding:0 16px;
+      max-width:900px; margin:1rem auto; padding:0 12px 32px;
     }
-    iframe{
+    .card{
+      background:var(--white); border-radius:16px; padding:10px;
+      box-shadow:0 6px 20px rgba(0,0,0,.06);
+      overflow:hidden;
+    }
+    /* Make iframe responsive */
+    .iframe-wrap{
       width:100%;
-      height:1800px; /* ajuste si besoin */
+      min-height:1800px; /* valeur sûre pour Google Forms sur mobile */
       border:0;
-      background:#fff;
-      border-radius:12px;
-      box-shadow:0 8px 24px rgba(0,0,0,.06);
+    }
+
+    .note{
+      text-align:center; color:#666; font-size:.9rem; margin:.75rem 0 0;
+    }
+
+    @media (min-width:768px){
+      .topbar h1{font-size:1.15rem}
+      .btn{font-size:.95rem}
+      .wrap{padding:0 16px 40px}
+      .iframe-wrap{min-height:1600px}
     }
   </style>
 </head>
 <body>
-  <nav class="topbar">
-    <a href="index.html" class="btn">← Retour à l’accueil</a>
-    <a href="depot.html" class="btn cta">Déposer une annonce</a>
-  </nav>
+
+  <!-- Barre du haut -->
+  <div class="topbar">
+    <a class="btn btn-outline" href="index.html" aria-label="Retour à l'accueil">← Retour à l’accueil</a>
+    <h1>Déposer une annonce</h1>
+    <div class="actions">
+      <a class="btn" target="_blank" rel="noopener"
+         href="https://docs.google.com/forms/d/e/1FAIpQLSc7brzvsYej3PvKLG908Gyky1KAah88QNTlBQgGpADuK-HEoA/viewform?usp=dialog">
+        Ouvrir le formulaire
+      </a>
+    </div>
+  </div>
 
   <main class="wrap">
-    <!-- Intégration Google Forms -->
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSc7brzvsYej3PvKLG908Gyky1KAah88QNTlBQgGpADuK-HEoA/viewform?usp=dialog"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      allow="clipboard-write; web-share">
-    </iframe>
+    <div class="card">
+      <!-- IFRAME GOOGLE FORMS -->
+      <iframe
+        class="iframe-wrap"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSc7brzvsYej3PvKLG908Gyky1KAah88QNTlBQgGpADuK-HEoA/viewform?embedded=true"
+        title="Formulaire VendsÇa — Déposer une annonce"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allow="clipboard-write">
+      </iframe>
+    </div>
+    <p class="note">Si le formulaire ne s’affiche pas, utilise le bouton “Ouvrir le formulaire”.</p>
   </main>
+
 </body>
 </html>
