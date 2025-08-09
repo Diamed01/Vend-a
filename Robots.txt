@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://diamed01.github.io/Vend-a/Sitemap.xml
