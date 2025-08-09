@@ -1,293 +1,95 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<title>VendsÇa — petites annonces (WhatsApp)</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Dépose ton annonce, je reçois sur WhatsApp et je valide. Simple, rapide, efficace.">
-<meta name="theme-color" content="#ff7a00">
-<style>
-:root{
-  --bg:#0f0f11; --card:#15161a; --text:#eef1f5; --muted:#a6adbb;
-  --orange:#ff7a00; --orange-2:#ff8f2b; --line:#26282e; --ok:#25d366;
-}
-*{box-sizing:border-box}
-html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
-a{color:var(--text);text-decoration:none}
-.container{max-width:980px;margin:0 auto;padding:22px 18px}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
-.logo{font-weight:900;font-size:22px;letter-spacing:.3px}
-.badge{background:#1e2026;border:1px solid var(--line);color:var(--muted);padding:4px 10px;border-radius:999px;font-size:12px}
-.links{display:flex;gap:12px;flex-wrap:wrap}
-.links a{padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:#101217}
-h1{margin:14px 0 8px;font-size:32px}
-p.meta{color:var(--muted);margin:0}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
-.grid{display:grid;gap:14px}
-.cols-2{grid-template-columns:1fr 1fr}
-.cols-3{grid-template-columns:repeat(3,1fr)}
-.btn{background:var(--orange);border:0;color:#2b1a09;font-weight:800;padding:14px 18px;border-radius:12px;cursor:pointer;box-shadow:0 12px 30px #ff7a0033}
-.btn:hover{background:var(--orange-2)}
-.section{margin:18px 0}
-.item{background:#121318;border:1px solid var(--line);border-radius:12px;padding:14px}
-.item .title{font-weight:700}
-.item .meta{color:var(--muted);font-size:13px;margin:6px 0 10px}
-.input,select,textarea{width:100%;background:#101217;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
-label{font-size:14px;color:var(--muted);display:block;margin:6px 0}
-.row{display:grid;gap:12px}
-@media(min-width:640px){.row{grid-template-columns:1fr 1fr}}
-footer{color:var(--muted);font-size:13px;margin:28px 0 8px}
-details{background:#121318;border:1px solid var(--line);border-radius:12px;padding:12px}
-summary{cursor:pointer;font-weight:700;color:#ffd7b1}
-.fab{position:fixed;right:16px;bottom:16px;width:56px;height:56px;border:0;border-radius:16px;background:var(--ok);color:#04270f;font-weight:900;box-shadow:0 14px 34px #25d36666;cursor:pointer}
-.hidden{display:none}
-@media(max-width:820px){.cols-2,.cols-3{grid-template-columns:1fr}h1{font-size:26px}}
-.tabbar{display:flex;gap:8px;margin:14px 0}
-.tab{padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#101217}
-.tab.active{background:var(--orange);color:#2b1a09;border-color:transparent}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VendsÇa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Fond clair */
+            color: #333;
+        }
+        header {
+            background-color: orange;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .btn-orange {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 10px 0;
+            background-color: orange;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .btn-orange:hover {
+            background-color: darkorange;
+        }
+        .annonce {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            background-color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #eee;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-<div class="container">
 
-  <!-- NAV -->
-  <div class="nav">
-    <div style="display:flex;align-items:center;gap:10px">
-      <div class="logo">VendsÇa</div>
-      <span class="badge">Annonces locales</span>
+<header>
+    <h1>VendsÇa</h1>
+    <p>Déposez et consultez des annonces facilement</p>
+</header>
+
+<main>
+    <a href="https://wa.me/33772442452?text=Je%20souhaite%20déposer%20une%20annonce" class="btn-orange">📢 Déposer une annonce</a>
+
+    <h2>Dernières annonces</h2>
+
+    <div class="annonce">
+        <h3>iPhone 13 Pro Max</h3>
+        <p>Très bon état, 256 Go, couleur graphite.</p>
+        <strong>Prix : 850 €</strong>
     </div>
-    <div class="links">
-      <a href="#" onclick="go('home');return false;">Accueil</a>
-      <a href="#" onclick="go('post');return false;">Déposer</a>
-      <a href="#" onclick="go('list');return false;">Annonces</a>
-      <a href="#" onclick="go('legal');return false;">Mentions</a>
+
+    <div class="annonce">
+        <h3>Vélo de course</h3>
+        <p>Peu servi, marque Trek, parfait pour l'été.</p>
+        <strong>Prix : 300 €</strong>
     </div>
-  </div>
 
-  <!-- Onglets -->
-  <div class="tabbar">
-    <button id="t-home"  class="tab active" onclick="go('home')">Accueil</button>
-    <button id="t-post"  class="tab"         onclick="go('post')">Déposer</button>
-    <button id="t-list"  class="tab"         onclick="go('list')">Annonces</button>
-    <button id="t-legal" class="tab"         onclick="go('legal')">Mentions</button>
-  </div>
-
-  <!-- Accueil -->
-  <section id="home" class="section">
-    <h1>Simple, rapide, efficace.</h1>
-    <p class="meta">Dépose ton annonce — je reçois sur WhatsApp et je valide. Tu ajoutes tes photos dans la conversation.</p>
-    <div class="grid cols-2" style="margin-top:14px">
-      <div class="card">
-        <h3 style="margin-top:0">Déposer une annonce</h3>
-        <p class="meta">Renseigne le titre, le prix, la ville, une description — c’est prêt en 30 secondes.</p>
-        <button class="btn" onclick="go('post')">📲 Déposer maintenant</button>
-      </div>
-      <div class="card">
-        <h3 style="margin-top:0">Annonces récentes (exemples)</h3>
-        <div class="grid cols-3">
-          <div class="item">
-            <div class="title">Chaussures Nike (neuves)</div>
-            <div class="meta">10 000 FCFA — Abidjan</div>
-            <button class="btn" onclick="wa('Intéressé par: Chaussures Nike neuves')">WhatsApp</button>
-          </div>
-          <div class="item">
-            <div class="title">Télé Samsung 42"</div>
-            <div class="meta">60 000 FCFA — Treichville</div>
-            <button class="btn" onclick="wa('Intéressé par: Télé Samsung 42 pouces')">WhatsApp</button>
-          </div>
-          <div class="item">
-            <div class="title">Service de livraison</div>
-            <div class="meta">Partout à Abidjan</div>
-            <button class="btn" onclick="wa('Intéressé par: Service de livraison')">WhatsApp</button>
-          </div>
-        </div>
-      </div>
+    <div class="annonce">
+        <h3>Appartement T2 à louer</h3>
+        <p>Rouen centre, 45m², proche commerces et transports.</p>
+        <strong>Loyer : 550 €/mois</strong>
     </div>
-  </section>
 
-  <!-- Déposer -->
-  <section id="post" class="section hidden">
-    <h1>Déposer une annonce</h1>
-    <div class="card">
-      <p class="meta">Après l’envoi, WhatsApp s’ouvre avec le récapitulatif. Ajoute tes photos dans la conversation.</p>
-      <form id="form" onsubmit="submitAd(event)">
-        <label>Titre de l’annonce</label>
-        <input class="input" name="title" placeholder="Ex. iPhone 12 128 Go" required>
+    <a href="index.html" class="btn-orange">🏠 Retour à l'accueil</a>
+</main>
 
-        <div class="row">
-          <div>
-            <label>Prix</label>
-            <input class="input" name="price" inputmode="decimal" placeholder="Ex. 15000 FCFA">
-          </div>
-          <div>
-            <label>Ville</label>
-            <input class="input" name="city" placeholder="Ex. Abidjan">
-          </div>
-        </div>
+<footer>
+    <p>© 2025 VendsÇa - Tous droits réservés</p>
+    <p>Contact : <a href="mailto:hamed.diarra@gmail.com">hamed.diarra@gmail.com</a></p>
+</footer>
 
-        <div class="row">
-          <div>
-            <label>Catégorie</label>
-            <select class="input" name="cat">
-              <option>Électronique</option>
-              <option>Véhicules</option>
-              <option>Immobilier</option>
-              <option>Maison</option>
-              <option>Mode / Beauté</option>
-              <option>Services</option>
-              <option>Autres</option>
-            </select>
-          </div>
-          <div>
-            <label>Téléphone vendeur</label>
-            <input class="input" name="phone" placeholder="Ex. 07 72 44 24 52">
-          </div>
-        </div>
-
-        <label>Description</label>
-        <textarea class="input" name="desc" rows="5" placeholder="État, accessoires, facture, remise en main propre…"></textarea>
-
-        <div style="margin-top:10px">
-          <button class="btn" type="submit">Envoyer sur WhatsApp</button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- Annonces (local/demo) -->
-  <section id="list" class="section hidden">
-    <h1>Annonces (démo locale)</h1>
-    <div class="card">
-      <div class="row">
-        <input id="q" class="input" placeholder="Recherche (titre, ville…)">
-        <select id="cat" class="input">
-          <option value="all">Toutes catégories</option>
-          <option>Électronique</option><option>Véhicules</option><option>Immobilier</option>
-          <option>Maison</option><option>Mode / Beauté</option><option>Services</option><option>Autres</option>
-        </select>
-      </div>
-      <label style="margin-top:8px"><input type="checkbox" id="pendingOnly"> Afficher seulement “En attente”</label>
-      <div id="listWrap" class="grid" style="margin-top:12px"></div>
-    </div>
-  </section>
-
-  <!-- Mentions -->
-  <section id="legal" class="section hidden">
-    <h1>Mentions légales</h1>
-    <div class="card">
-      <p><b>Éditeur :</b> VendsÇa</p>
-      <p><b>Contact :</b> <a href="mailto:hamed.diarra@gmail.com">hamed.diarra@gmail.com</a> — WhatsApp : <a href="https://wa.me/33772442452" target="_blank" rel="noopener">+33 7 72 44 24 52</a></p>
-      <p><b>Hébergement :</b> GitHub Pages (ou Hostinger).</p>
-      <hr style="border:0;border-top:1px solid var(--line);margin:12px 0">
-      <p class="meta">VendsÇa est une plateforme de petites annonces. Les annonces sont publiées sous la responsabilité de leurs auteurs. Suppression/rectification sur simple demande. Aucune adresse personnelle n’est publiée.</p>
-    </div>
-  </section>
-
-  <footer>© <span id="y"></span> VendsÇa — Tous droits réservés.</footer>
-</div>
-
-<!-- bouton flottant WhatsApp -->
-<button class="fab" onclick="wa()">WA</button>
-
-<script>
-/* CONFIG */
-const ADMIN_WA = "33772442452"; // +33 7 72 44 24 52 (sans + ni espaces)
-const KEY = "vendca_ads_v1";
-
-/* ROUTER */
-function go(id){
-  ["home","post","list","legal"].forEach(s=>{
-    document.getElementById(s).classList.toggle("hidden", s!==id);
-    document.getElementById("t-"+s).classList.toggle("active", s===id);
-  });
-  if(id==="list") renderList();
-  window.scrollTo(0,0);
-}
-
-/* WHATSAPP */
-function wa(text=""){ window.open("https://wa.me/"+ADMIN_WA+(text?("?text="+encodeURIComponent(text)):""), "_blank"); }
-
-/* FORM SUBMIT */
-function submitAd(e){
-  e.preventDefault();
-  const d = new FormData(e.target);
-  const ad = {
-    id: Date.now(),
-    title: d.get("title").trim(),
-    price: d.get("price").trim(),
-    city:  d.get("city").trim(),
-    cat:   d.get("cat"),
-    phone: d.get("phone").trim(),
-    desc:  d.get("desc").trim(),
-    status:"pending",
-    at: new Date().toISOString()
-  };
-
-  // Stockage local (démo)
-  const ads = load(); ads.unshift(ad); save(ads);
-
-  // Message WA
-  const msg = [
-    "🟠 *VendsÇa – Nouvelle annonce*",
-    "",
-    "• Titre : "+(ad.title||"-"),
-    "• Prix : "+(ad.price||"-"),
-    "• Ville : "+(ad.city||"-"),
-    "• Catégorie : "+(ad.cat||"-"),
-    "• Contact vendeur : "+(ad.phone||"-"),
-    "",
-    "Description :",
-    (ad.desc||"-"),
-    "",
-    "(Photos à joindre dans WhatsApp)"
-  ].join("\n");
-  wa(msg);
-  e.target.reset();
-  alert("Annonce envoyée sur WhatsApp 👍");
-  go('list');
-}
-
-/* LISTE LOCALE */
-function load(){ try{return JSON.parse(localStorage.getItem(KEY))||[]}catch{return[]} }
-function save(v){ localStorage.setItem(KEY, JSON.stringify(v)) }
-function eur(x){
-  if(!x) return "-";
-  const n = Number(String(x).replace(/[^\d.,]/g,"").replace(",",".")); 
-  return isNaN(n) ? x : new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR'}).format(n);
-}
-function renderList(){
-  const q = (document.getElementById("q").value||"").toLowerCase();
-  const cat = document.getElementById("cat").value;
-  const only = document.getElementById("pendingOnly").checked;
-
-  let ads = load();
-  if(cat!=="all") ads = ads.filter(a=>a.cat===cat);
-  if(only) ads = ads.filter(a=>a.status!=="valid");
-  if(q) ads = ads.filter(a => (a.title+a.city+a.desc).toLowerCase().includes(q));
-
-  document.getElementById("listWrap").innerHTML = ads.map(a=>`
-    <div class="item">
-      <div class="title">${a.title}</div>
-      <div class="meta"><span class="badge">${a.cat}</span> • ${a.city||"-"} • ${eur(a.price)}</div>
-      <div class="meta">Vendeur : ${a.phone||"-"}</div>
-      <div>${(a.desc||"").replace(/\n/g,"<br>")}</div>
-      <div style="display:flex;gap:10px;align-items:center;margin-top:8px;flex-wrap:wrap">
-        <button class="btn" onclick='wa("Je suis intéressé(e) par: ${a.title} — ${eur(a.price)} — ${a.city}")'>Contacter</button>
-        <span class="badge">${a.status==="valid"?"Validée":"En attente"}</span>
-        <span style="flex:1"></span>
-        <button class="badge" onclick="toggle(${a.id})">Basculer statut</button>
-        <button class="badge" onclick="removeAd(${a.id})">Supprimer</button>
-      </div>
-    </div>
-  `).join("") || '<div class="meta">Aucune annonce pour le moment.</div>';
-}
-function toggle(id){ const ads = load(); const i = ads.findIndex(x=>x.id===id); if(i<0)return; ads[i].status = ads[i].status==="valid"?"pending":"valid"; save(ads); renderList(); }
-function removeAd(id){ if(!confirm("Supprimer ?")) return; save(load().filter(x=>x.id!==id)); renderList(); }
-
-/* INIT */
-document.getElementById("y").textContent = new Date().getFullYear();
-go((location.hash||"#home").slice(1));
-</script>
 </body>
 </html>
