@@ -1,218 +1,265 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>VendsÇa – Dépose ton annonce</title>
-  <meta name="description" content="VendsÇa : publie ton annonce en 30 secondes et envoie-la directement sur WhatsApp.">
-  <meta name="theme-color" content="#ff7f00" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0f172a; --card:#0b1220; --muted:#94a3b8; --text:#e5e7eb;
-      --accent:#ff7f00; --accent2:#ff8a1a; --ring:#ff7f0044; --border:#1f2937;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:linear-gradient(180deg,#0b1220 0%, #0f172a 100%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
-    a{color:#7dd3fc;text-decoration:none}
-    .container{max-width:980px;margin:0 auto;padding:0 18px}
-    header{padding:22px 0}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:42px;height:42px;border-radius:10px;background:radial-gradient(120% 120% at 20% 0%, #34d399 0%, #10b981 40%, #0ea5e9 100%);box-shadow:0 10px 30px #10b98144}
-    h1{margin:0;font-size:26px;font-weight:800}
-    .tag{margin-top:4px;color:var(--muted);font-size:14px}
-    nav.nav{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 0}
-    nav.nav a{background:#111827;border:1px solid var(--border);color:#e5e7eb;padding:8px 12px;border-radius:10px}
-
-    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:0 10px 35px #0006}
-    .wrap{padding:18px}
-
-    .cta{
-      display:inline-flex;align-items:center;gap:10px;
-      background:linear-gradient(180deg,var(--accent),var(--accent2));
-      color:#24180a;border:0;border-radius:12px;padding:14px 18px;font-weight:800;cursor:pointer;text-decoration:none;
-      box-shadow:0 12px 30px #ff7f0033;
-    }
-    .cta:active{transform:translateY(1px)}
-
-    main{margin:16px 0}
-    .grid{display:grid;grid-template-columns:1fr;gap:14px}
-    @media(min-width:860px){.grid{grid-template-columns:repeat(3,1fr)}}
-    .card-item{background:#0b1220;border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 6px 22px #0006}
-    .img{height:160px;background:#0f172a;display:flex;align-items:center;justify-content:center;color:#64748b;font-size:12px}
-    .wrap-sm{padding:14px}
-    .title{margin:0 0 6px;font-weight:800}
-    .meta{color:var(--muted);font-size:14px;margin:0 0 10px}
-    .btn-mini{display:inline-block;background:#222;border:1px solid #334155;border-radius:10px;color:#e5e7eb;padding:8px 12px;font-weight:700;text-decoration:none}
-
-    /* Formulaire */
-    form{display:grid;gap:12px;margin-top:10px}
-    label{font-size:13px;color:var(--muted);display:block}
-    input,select,textarea{width:100%;padding:13px;border-radius:12px;border:1px solid #263244;background:#0b1220;color:var(--text);outline:none}
-    input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px var(--ring)}
-    .row{display:grid;gap:12px}
-    @media(min-width:600px){.row{grid-template-columns:1fr 1fr}}
-    .ok{color:#86efac;font-weight:600;display:none;margin-top:-6px}
-
-    footer{color:var(--muted);font-size:13px;padding:18px 0 30px}
-    details{background:#0b1220;border:1px solid var(--border);border-radius:12px;padding:12px;margin-top:10px}
-    summary{cursor:pointer;font-weight:700}
-
-    /* Bouton flottant WhatsApp */
-    .fab{
-      position:fixed;right:16px;bottom:16px;width:56px;height:56px;border-radius:16px;border:0;
-      background:#25D366;color:#082c16;font-weight:900;display:flex;align-items:center;justify-content:center;
-      box-shadow:0 14px 34px #25d36666;cursor:pointer
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VendsÇa — petites annonces (WhatsApp)</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 32'%3E%3Crect width='130' height='32' rx='8' fill='%23FF7A00'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' font-size='16' font-family='Inter,Arial' fill='white'%3EVendsÇa%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#0f0f11;--card:#15161a;--muted:#9aa3ad;--text:#eef1f5;--orange:#ff7a00;--orange-700:#e86d00;--line:#26282e}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Arial}
+a{color:var(--text);text-decoration:none}
+.container{max-width:980px;margin:0 auto;padding:20px}
+.nav{display:flex;gap:14px;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line)}
+.badge{background:#1e2026;color:var(--muted);padding:4px 10px;border-radius:999px;font-size:12px;border:1px solid var(--line)}
+.links a{opacity:.9;margin:0 10px}
+h1{margin:0 0 10px;font-size:32px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.grid{display:grid;gap:14px}
+.cols-2{grid-template-columns:1fr 1fr}
+.hero{display:grid;gap:18px;padding:26px 0}
+.input,select,textarea{width:100%;background:#101217;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+label{font-size:14px;color:var(--muted);display:block;margin:6px 0}
+.btn{background:var(--orange);border:none;padding:14px 18px;border-radius:10px;color:#fff;font-weight:700}
+.btn:hover{background:var(--orange-700);cursor:pointer}
+.meta{color:var(--muted);font-size:13px}
+.item{display:grid;gap:8px;border:1px solid var(--line);border-radius:12px;padding:14px;background:#121318}
+.tag{display:inline-block;padding:3px 8px;border-radius:8px;background:#1a1d23;border:1px solid var(--line);font-size:12px;color:var(--muted)}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+hr{border:0;border-top:1px solid var(--line);margin:16px 0}
+footer{margin:36px 0 24px;color:var(--muted);font-size:13px}
+@media(max-width:780px){.cols-2{grid-template-columns:1fr}h1{font-size:26px}}
+/* tabs */
+.tabs{display:flex;gap:8px;margin-bottom:14px}
+.tab{border:1px solid var(--line);background:#101217;color:var(--text);padding:10px 12px;border-radius:10px}
+.tab.active{background:var(--orange);color:#fff;border-color:var(--orange)}
+.hidden{display:none}
+</style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo"></div>
-        <div>
-          <h1>VendsÇa</h1>
-          <div class="tag">Dépose ton annonce → envoi direct WhatsApp</div>
-          <nav class="nav">
-            <a href="#accueil">Accueil</a>
-            <a href="#deposer">Déposer une annonce</a>
-            <a href="#mentions">Mentions légales</a>
-          </nav>
-        </div>
-      </div>
-    </header>
+<div class="container">
 
-    <!-- HERO -->
-    <section id="accueil" class="card" style="margin:14px 0">
-      <div class="wrap">
-        <h2 style="margin:0 0 10px">Publie en 30 secondes</h2>
-        <p class="tag" style="margin:0 0 14px">Un message WhatsApp prérempli s’ouvre, tu ajoutes tes photos et c’est tout.</p>
-        <a id="cta" class="cta" href="#">📲 Déposer une annonce</a>
-      </div>
-    </section>
+  <!-- NAV -->
+  <nav class="nav">
+    <div style="display:flex;align-items:center;gap:10px">
+      <span class="badge">VendsÇa</span>
+      <span class="meta">Plateforme d’annonces</span>
+    </div>
+    <div class="links">
+      <a href="#" onclick="show('home');return false;">Accueil</a>
+      <a href="#" onclick="show('list');return false;">Annonces</a>
+      <a href="#" onclick="show('post');return false;">Déposer</a>
+      <a href="#" onclick="show('legal');return false;">Mentions</a>
+    </div>
+  </nav>
 
-    <!-- ANNONCES DÉMO -->
-    <main>
-      <h3 style="margin:0 0 10px">Annonces récentes (exemples)</h3>
-      <div class="grid">
-        <article class="card-item">
-          <div class="img">Photo</div>
-          <div class="wrap-sm">
-            <h4 class="title">Chaussures Nike neuves</h4>
-            <p class="meta">10 000 FCFA — Abidjan</p>
-            <a class="btn-mini" href="#" id="c1">Contacter sur WhatsApp</a>
-          </div>
-        </article>
-        <article class="card-item">
-          <div class="img">Photo</div>
-          <div class="wrap-sm">
-            <h4 class="title">Télé Samsung 42"</h4>
-            <p class="meta">60 000 FCFA — Treichville</p>
-            <a class="btn-mini" href="#" id="c2">Contacter sur WhatsApp</a>
-          </div>
-        </article>
-        <article class="card-item">
-          <div class="img">Photo</div>
-          <div class="wrap-sm">
-            <h4 class="title">Service de livraison</h4>
-            <p class="meta">Partout à Abidjan</p>
-            <a class="btn-mini" href="#" id="c3">Contacter sur WhatsApp</a>
-          </div>
-        </article>
-      </div>
-    </main>
-
-    <!-- FORMULAIRE SIMPLE -->
-    <section id="deposer" class="card" style="margin:16px 0">
-      <div class="wrap">
-        <h3 style="margin:0 0 10px">Déposer une annonce</h3>
-        <p class="tag" style="margin:0">Remplis et clique sur “Envoyer” : ton WhatsApp s’ouvre et tu ajoutes les photos.</p>
-        <form id="f">
-          <label>Titre<input name="title" required placeholder="Ex: iPhone 12, Aspirateur…"></label>
-          <div class="row">
-            <label>Catégorie
-              <select name="category" required>
-                <option value="">Choisir…</option>
-                <option>Électronique</option><option>Véhicules</option><option>Immobilier</option>
-                <option>Maison</option><option>Mode / Beauté</option><option>Services</option><option>Autres</option>
-              </select>
-            </label>
-            <label>Prix (FCFA)<input name="price" inputmode="numeric" placeholder="Ex: 15000"></label>
-          </div>
-          <div class="row">
-            <label>Ville<input name="city" placeholder="Ex: Abidjan"></label>
-            <label>Contact vendeur<input name="contact" placeholder="Ex: 07 72 44 24 52"></label>
-          </div>
-          <label>Description<textarea name="desc" rows="5" placeholder="État, accessoires, livraison…"></textarea></label>
-          <button class="cta" type="submit">Envoyer sur WhatsApp</button>
-          <div id="ok" class="ok">Préparation du message…</div>
-        </form>
-      </div>
-    </section>
-
-    <!-- MENTIONS (sans adresse perso) -->
-    <footer id="mentions">
-      <details open>
-        <summary>Mentions légales</summary>
-        <p>Éditeur : <strong>VendsCa</strong><br>
-           Contact : <a href="mailto:hamed.diarra@gmail.com">hamed.diarra@gmail.com</a><br>
-           WhatsApp : <a href="https://wa.me/33772442452" target="_blank" rel="noopener">+33 7 72 44 24 52</a></p>
-        <p>Hébergement : GitHub Pages (ou Hostinger).</p>
-        <p>VendsÇa est une plateforme de petites annonces. Les annonces sont publiées sous la responsabilité de leurs auteurs. Suppression sur simple demande.</p>
-      </details>
-      <p style="margin-top:10px">© <span id="y"></span> VendsÇa — Tous droits réservés.</p>
-    </footer>
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab active" id="t-home" onclick="show('home')">Accueil</button>
+    <button class="tab" id="t-list" onclick="show('list')">Annonces</button>
+    <button class="tab" id="t-post" onclick="show('post')">Déposer</button>
+    <button class="tab" id="t-legal" onclick="show('legal')">Mentions</button>
   </div>
 
-  <!-- Bouton flottant WhatsApp -->
-  <button class="fab" id="fab">WA</button>
+  <!-- ACCUEIL -->
+  <section id="home" class="hero">
+    <h1>Simple, rapide, efficace.</h1>
+    <div class="card">
+      <div class="grid cols-2">
+        <div>
+          <h3>Comment ça marche ?</h3>
+          <p class="meta">
+            1) Dépose ton annonce.<br>
+            2) J’en reçois le récap sur WhatsApp (+33 7 72 44 24 52).<br>
+            3) L’annonce apparaît ici (stockage local pour test/validation).
+          </p>
+          <button class="btn" onclick="show('post')">Déposer une annonce</button>
+        </div>
+        <div>
+          <h3>Parcourir</h3>
+          <p class="meta">Recherche, filtre par catégorie, statut (en attente/validée). Admin local pour valider/supprimer.</p>
+          <button class="btn" onclick="show('list')">Voir les annonces</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    // Numéro WhatsApp au format international (sans + ni espaces)
-    const ADMIN = "33772442452";
+  <!-- LISTE -->
+  <section id="list" class="hero hidden">
+    <h1>Annonces</h1>
+    <div class="card">
+      <div class="grid cols-2">
+        <input id="q" class="input" placeholder="Recherche (titre, ville…)">
+        <select id="catSel" class="input">
+          <option value="all">Toutes catégories</option>
+          <option>Informatique</option><option>Smartphones</option>
+          <option>Véhicules</option><option>Maison</option>
+          <option>Loisirs</option><option>Services</option>
+        </select>
+      </div>
+      <label style="margin-top:10px"><input type="checkbox" id="onlyPending"> Afficher seulement “En attente”</label>
+      <div id="listWrap" class="grid" style="margin-top:12px"></div>
+    </div>
+  </section>
 
-    function wa(text=""){
-      const url = "https://wa.me/" + ADMIN + (text ? ("?text=" + encodeURIComponent(text)) : "");
-      window.location.href = url;
-    }
+  <!-- DEPOT -->
+  <section id="post" class="hero hidden">
+    <h1>Déposer une annonce</h1>
+    <div class="card">
+      <form id="f" class="grid cols-2">
+        <div><label>Titre</label><input class="input" name="title" placeholder="Ex. iPhone 12 128 Go" required></div>
+        <div><label>Prix (€)</label><input class="input" name="price" inputmode="decimal" placeholder="Ex. 250" required></div>
+        <div><label>Ville</label><input class="input" name="city" placeholder="Ex. Rouen" required></div>
+        <div><label>Téléphone vendeur</label><input class="input" name="phone" placeholder="Ex. 06 12 34 56 78" required></div>
+        <div>
+          <label>Catégorie</label>
+          <select class="input" name="cat">
+            <option>Informatique</option><option>Smartphones</option>
+            <option>Véhicules</option><option>Maison</option>
+            <option>Loisirs</option><option>Services</option>
+          </select>
+        </div>
+        <div style="grid-column:1/-1">
+          <label>Description</label>
+          <textarea class="input" name="desc" rows="6" placeholder="État, accessoires, facture, remise en main propre…"></textarea>
+        </div>
+        <div style="grid-column:1/-1">
+          <button class="btn">Envoyer & ouvrir WhatsApp</button>
+          <p class="meta" style="margin-top:8px">Ajoute ensuite tes photos dans la conversation WhatsApp.</p>
+        </div>
+      </form>
+    </div>
+  </section>
 
-    // CTA principal
-    document.getElementById('cta').addEventListener('click', (e)=>{
-      e.preventDefault();
-      wa("Bonjour, je souhaite déposer une annonce sur VendsÇa. (Titre, Prix, Ville, Description, Photos)");
-    });
+  <!-- MENTIONS -->
+  <section id="legal" class="hero hidden">
+    <h1>Mentions légales</h1>
+    <div class="card">
+      <p><b>Éditeur :</b> VendsÇa</p>
+      <p><b>Contact :</b> <a href="mailto:hamed.diarra@gmail.com">hamed.diarra@gmail.com</a></p>
+      <p><b>WhatsApp :</b> +33 7 72 44 24 52</p>
+      <hr>
+      <p class="meta">
+        VendsÇa est une plateforme de petites annonces. Les annonces sont
+        publiées sous la responsabilité de leurs auteurs. Suppression/rectification
+        sur simple demande par email ou WhatsApp. Aucune adresse personnelle n’est publiée.
+      </p>
+      <p class="meta">Hébergement : GitHub Pages (ou Hostinger).</p>
+    </div>
+  </section>
 
-    // Bouton flottant
-    document.getElementById('fab').addEventListener('click', ()=> wa());
+  <footer>© 2025 VendsÇa — Tous droits réservés.</footer>
+</div>
 
-    // Petits boutons sur cartes (exemples)
-    document.getElementById('c1').addEventListener('click', (e)=>{ e.preventDefault(); wa("Intéressé par: Chaussures Nike neuves"); });
-    document.getElementById('c2').addEventListener('click', (e)=>{ e.preventDefault(); wa('Intéressé par: Télé Samsung 42"'); });
-    document.getElementById('c3').addEventListener('click', (e)=>{ e.preventDefault(); wa("Intéressé par: Service de livraison"); });
+<script>
+/* ========= CONFIG ========= */
+const WA_NUMBER = "+33772442452"; // ton WhatsApp
+const KEY = "vendsca_ads_v1";
 
-    // Formulaire -> WhatsApp prérempli
-    document.getElementById('f').addEventListener('submit', (e)=>{
-      e.preventDefault();
-      const fd = new FormData(e.target);
-      const d = Object.fromEntries(fd.entries());
-      const lines = [
-        "Nouvelle annonce VendsÇa :",
-        "• Titre : " + (d.title||"-"),
-        "• Catégorie : " + (d.category||"-"),
-        "• Prix : " + (d.price? d.price + " FCFA":"-"),
-        "• Ville : " + (d.city||"-"),
-        "• Contact vendeur : " + (d.contact||"-"),
-        "• Description : " + (d.desc||"-"),
-        "", "(Photos à joindre dans WhatsApp)"
-      ];
-      document.getElementById('ok').style.display='block';
-      wa(lines.join("\n"));
-    });
+/* ========= STORAGE ========= */
+const load = ()=> { try{return JSON.parse(localStorage.getItem(KEY))||[]}catch{return[]} };
+const save = (arr)=> localStorage.setItem(KEY, JSON.stringify(arr));
 
-    // Année dynamique
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+/* ========= UI / ROUTER ========= */
+function show(id){
+  ["home","list","post","legal"].forEach(s=>{
+    document.getElementById(s).classList.toggle("hidden", s!==id);
+    document.getElementById("t-"+s).classList.toggle("active", s===id);
+  });
+  if(id==="list") renderList();
+  window.scrollTo(0,0);
+}
+
+/* ========= LIST ========= */
+function €(v){const n=Number(v||0);return isNaN(n)?v:new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR'}).format(n)}
+function renderList(){
+  const wrap = document.getElementById("listWrap");
+  if(!wrap) return;
+  const term = (document.getElementById("q").value||"").toLowerCase();
+  const cat = document.getElementById("catSel").value;
+  const onlyP = document.getElementById("onlyPending").checked;
+
+  let ads = load();
+  if(cat!=="all") ads = ads.filter(a=>a.cat===cat);
+  if(onlyP) ads = ads.filter(a=>a.status!=="valid");
+  if(term) ads = ads.filter(a => (a.title+a.city+a.desc).toLowerCase().includes(term));
+
+  wrap.innerHTML = ads.map(a=>`
+    <div class="item">
+      <div style="font-weight:700">${a.title}</div>
+      <div class="meta">
+        <span class="tag">${a.cat}</span> • ${a.city} • ${€(a.price)}
+      </div>
+      <div class="meta">Vendeur : ${a.phone}</div>
+      <div>${(a.desc||"").replace(/\n/g,"<br>")}</div>
+      <div class="toolbar">
+        <button class="btn" onclick="contact(${a.id})">Contacter</button>
+        <span class="tag">${a.status==="valid"?"Validée":"En attente"}</span>
+        <span style="flex:1"></span>
+        <button class="badge" onclick="toggle(${a.id})">Basculer statut</button>
+        <button class="badge" onclick="delAd(${a.id})">Supprimer</button>
+      </div>
+    </div>
+  `).join("") || `<div class="meta">Aucune annonce pour le moment.</div>`;
+}
+
+function contact(id){
+  const ad = load().find(x=>x.id===id); if(!ad) return;
+  const msg = `Demande d'info (VendsÇa)\n\n• ${ad.title} — ${€(ad.price)} — ${ad.city}\n• Vendeur: ${ad.phone}\n\nBonjour, je suis intéressé(e).`;
+  const url = "https://wa.me/"+WA_NUMBER.replace(/\D/g,"")+"?text="+encodeURIComponent(msg);
+  window.open(url,"_blank");
+}
+function toggle(id){
+  const ads = load(); const i = ads.findIndex(x=>x.id===id); if(i<0) return;
+  ads[i].status = ads[i].status==="valid" ? "pending" : "valid"; save(ads); renderList();
+}
+function delAd(id){
+  if(!confirm("Supprimer cette annonce ?")) return;
+  save(load().filter(x=>x.id!==id)); renderList();
+}
+
+/* ========= FORM ========= */
+document.getElementById("f").addEventListener("submit", e=>{
+  e.preventDefault();
+  const d = new FormData(e.target);
+  const ad = {
+    id: Date.now(),
+    title: d.get("title").trim(),
+    price: d.get("price").trim(),
+    city: d.get("city").trim(),
+    phone: d.get("phone").trim(),
+    cat: d.get("cat"),
+    desc: d.get("desc").trim(),
+    status: "pending",
+    createdAt: new Date().toISOString()
+  };
+  const ads = load(); ads.unshift(ad); save(ads);
+
+  const msg =
+`Nouvelle annonce via VendsÇa :
+
+• Titre : ${ad.title}
+• Prix : ${ad.price} €
+• Catégorie : ${ad.cat}
+• Ville : ${ad.city}
+• Téléphone vendeur : ${ad.phone}
+
+Description :
+${ad.desc}
+
+(Photos à joindre dans WhatsApp)`;
+
+  const url = "https://wa.me/"+WA_NUMBER.replace(/\D/g,"")+"?text="+encodeURIComponent(msg);
+  window.open(url,"_blank");
+  e.target.reset();
+  alert("Annonce enregistrée localement et envoyée sur WhatsApp 👍");
+  show('list');
+});
+
+/* auto-tab selon l'ancre */
+const hash = (location.hash||"").replace("#","");
+show(["list","post","legal"].includes(hash)?hash:"home");
+</script>
 </body>
 </html>
