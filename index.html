@@ -1,176 +1,128 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>VendsÇa – Petites annonces locales simples et rapides</title>
-  <meta name="description" content="VendsÇa : vends, achète ou propose tes services facilement, gratuitement et localement. Dépose une annonce en 2 minutes !" />
-  <link rel="canonical" href="https://diamed01.github.io/Vend-a/" />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="Diarra Hamed" />
-  <meta name="theme-color" content="#ff7f00" />
-
-  <!-- Google Search Console (garde bien cette balise) -->
-  <meta name="google-site-verification" content="xGNu8600RolBScsTeW4El4bDwb21R1rsrUB5frUfyFM" />
-
-  <!-- Open Graph / Partage -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://diamed01.github.io/Vend-a/" />
-  <meta property="og:title" content="VendsÇa – Petites annonces locales simples et rapides" />
-  <meta property="og:description" content="VendsÇa : vends, achète ou propose tes services facilement, gratuitement et localement. Dépose une annonce en 2 minutes !" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="VendsÇa – Petites annonces locales simples et rapides" />
-  <meta name="twitter:description" content="Dépose une annonce en 2 minutes !" />
-
-  <!-- JSON-LD (données structurées) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "VendsÇa",
-    "url": "https://diamed01.github.io/Vend-a/",
-    "publisher": {
-      "@type": "Organization",
-      "name": "VendsÇa",
-      "url": "https://diamed01.github.io/Vend-a/"
-    },
-    "description": "Plateforme de petites annonces locales."
-  }
-  </script>
-
+  <meta charset="utf-8">
+  <title>VendsÇa — Dépose ton annonce</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="VendsÇa — Dépose et découvre des annonces près de chez toi.">
   <style>
-    :root {
-      --orange: #ff7f00;
-      --bg: #f9f9fb;
-      --text: #222;
-      --muted: #666;
-      --card: #fff;
-      --radius: 16px;
-      --shadow: 0 6px 18px rgba(0,0,0,.06);
-    }
-    * { box-sizing: border-box; }
-    html, body { margin:0; padding:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--text); background: var(--bg); }
-    a { color: inherit; text-decoration: none; }
-
-    header {
-      background: var(--orange);
-      color: #fff;
-      padding: 22px 16px;
-      text-align: center;
-      position: sticky; top: 0; z-index: 10;
-    }
-    header .brand { font-size: 30px; font-weight: 800; letter-spacing: .5px; }
-    header .tag { margin-top: 6px; opacity: .95; font-weight: 500; }
-
-    .wrap { max-width: 920px; margin: 18px auto; padding: 0 14px; }
-
-    .cta {
-      display: inline-block; background: var(--orange); color:#fff; font-weight: 800;
-      padding: 14px 20px; border-radius: 999px; box-shadow: var(--shadow);
-      transition: transform .06s ease-in-out; margin: 14px 0 8px;
-    }
-    .cta:active { transform: scale(.98); }
-
-    .cards { display: grid; gap: 14px; margin: 16px 0 28px; }
-    @media (min-width:720px){ .cards{ grid-template-columns: 1fr 1fr; } }
-
-    .card {
-      background: var(--card); border-radius: var(--radius); padding: 16px 18px; box-shadow: var(--shadow);
-    }
-    .badge {
-      display:inline-block; font-size: 13px; background:#eef0f6; color:#3a3d45; padding:6px 10px; border-radius:999px; margin-bottom:8px;
-    }
-    .title { font-size: 20px; font-weight: 800; margin: 4px 0 6px; }
-    .meta { color: var(--muted); font-weight: 600; margin-bottom: 8px; }
-    .desc { color:#333; line-height: 1.45; }
-
-    footer {
-      background:#fff; margin-top: 26px; padding: 24px 16px; box-shadow: var(--shadow);
-    }
-    footer .links a { color:#333; font-weight:700; }
-    footer .small { color: var(--muted); margin-top: 8px; font-size: 14px; }
-
-    /* Sections légales repliables */
-    details { background:#fff; border-radius: var(--radius); padding:14px 16px; box-shadow: var(--shadow); margin: 10px 0; }
-    details summary { cursor: pointer; font-weight: 800; }
-    details p { color:#333; line-height:1.5; }
+    :root{--bg:#0f1220;--card:#171a2b;--text:#e8e9ef;--muted:#aeb1c7;--pri:#6d8cff;--ok:#1fcc8f}
+    *{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+    body{margin:0;background:linear-gradient(180deg,#0d1020,#151935);}
+    header{padding:24px 16px;text-align:center;color:var(--text)}
+    header h1{margin:0;font-size:28px;letter-spacing:.4px}
+    header p{margin:6px 0 0;color:var(--muted)}
+    main{max-width:900px;margin:18px auto;padding:0 16px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media (max-width:820px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid #222743;border-radius:14px;padding:18px;color:var(--text);box-shadow:0 8px 30px rgba(0,0,0,.35)}
+    label{display:block;font-weight:600;margin-bottom:6px}
+    input,textarea,select{width:100%;border:1px solid #2a2f4a;background:#0e1224;color:var(--text);border-radius:10px;padding:12px;font-size:15px;outline:none}
+    textarea{min-height:110px;resize:vertical}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .btn{display:inline-block;background:var(--pri);color:white;border:none;padding:12px 16px;border-radius:10px;font-weight:700;cursor:pointer}
+    .btn:disabled{opacity:.6;cursor:not-allowed}
+    .muted{color:var(--muted);font-size:14px}
+    .list{display:grid;gap:12px}
+    footer{max-width:900px;margin:28px auto 40px;padding:0 16px;color:var(--muted);font-size:13px}
+    a{color:#9fb2ff}
   </style>
 </head>
 <body>
+<header>
+  <h1>VendsÇa</h1>
+  <p>Dépose ton annonce — je reçois sur WhatsApp et je valide.</p>
+</header>
 
-  <header>
-    <div class="brand">VendsÇa</div>
-    <div class="tag">Vends, achète ou propose tes services facilement, gratuitement et localement.</div>
-    <a class="cta" href="depot.html">+ Déposer une annonce</a>
-  </header>
+<main class="grid">
+  <!-- Dépôt d’annonce -->
+  <section class="card">
+    <h2 style="margin:0 0 12px">Déposer une annonce</h2>
+    <div class="muted" style="margin-bottom:12px">⚠️ Photos à envoyer ensuite dans WhatsApp.</div>
+    <form id="adForm">
+      <label>Titre de l’annonce</label>
+      <input id="title" required placeholder="Ex. iPhone 12 128 Go"/>
 
-  <main class="wrap">
+      <div class="row" style="margin-top:12px">
+        <div>
+          <label>Prix (€)</label>
+          <input id="price" type="number" min="0" step="1" placeholder="Ex. 250"/>
+        </div>
+        <div>
+          <label>Ville</label>
+          <input id="city" placeholder="Ex. Rouen"/>
+        </div>
+      </div>
 
-    <!-- Annonces d’exemple (pour donner envie) -->
-    <div class="cards">
-      <article class="card">
-        <div class="badge">Chaussures</div>
-        <div class="title">Chaussures neuves – 10 000 FCFA</div>
-        <div class="meta">Lieu : Abidjan</div>
-        <div class="desc">Pointure 42, jamais portées. Idéal pour la rentrée.</div>
-      </article>
+      <div class="row" style="margin-top:12px">
+        <div>
+          <label>Catégorie</label>
+          <select id="category">
+            <option>Informatique</option><option>Smartphones</option><option>Mode</option>
+            <option>Maison</option><option>Auto/Moto</option><option>Autre</option>
+          </select>
+        </div>
+        <div>
+          <label>Téléphone vendeur</label>
+          <input id="seller" placeholder="Ex. 06 12 34 56 78"/>
+        </div>
+      </div>
 
-      <article class="card">
-        <div class="badge">Téléphone</div>
-        <div class="title">Smartphone Samsung – 50 000 FCFA</div>
-        <div class="meta">Lieu : Yopougon</div>
-        <div class="desc">Très bon état, batterie correcte, chargeur inclus.</div>
-      </article>
+      <label style="margin-top:12px">Description</label>
+      <textarea id="desc" placeholder="État, accessoires, facture, remise en main propre…"></textarea>
 
-      <article class="card">
-        <div class="badge">Service</div>
-        <div class="title">Service de livraison</div>
-        <div class="meta">Disponible : Abidjan et alentours</div>
-        <div class="desc">Livraison rapide, soignée et au meilleur prix.</div>
-      </article>
-    </div>
+      <button class="btn" style="margin-top:14px" id="sendBtn" type="submit">Envoyer sur WhatsApp</button>
+      <div class="muted" style="margin-top:8px">En cliquant, WhatsApp s’ouvre avec le récapitulatif. Joins tes photos dans la conversation.</div>
+    </form>
+  </section>
 
-    <a class="cta" href="depot.html">+ Déposer une annonce</a>
+  <!-- Infos / Mentions -->
+  <section class="card">
+    <h2 style="margin:0 0 12px">Contact & Mentions</h2>
+    <p class="muted">Éditeur : <b>M. Diarra</b><br>
+      Email : <a href="mailto:hamed.diarra@gmail.com">hamed.diarra@gmail.com</a><br>
+      Localisation : Rouen, France</p>
+    <hr style="border:0;border-top:1px solid #2a2f4a;margin:12px 0">
+    <p class="muted">Pour toute question ou signalement : <a href="mailto:hamed.diarra@gmail.com">hamed.diarra@gmail.com</a>.</p>
+  </section>
+</main>
 
-    <!-- Mentions & politiques (dans la même page, repliables) -->
-    <details id="mentions-legales" style="margin-top:22px;">
-      <summary>Mentions légales</summary>
-      <p><strong>Éditeur :</strong> Diarra Hamed – France, Rouen (76000).<br>
-      <strong>Nom du site :</strong> VendsÇa – Plateforme de petites annonces locales.<br>
-      <strong>Hébergement :</strong> GitHub Pages – GitHub, Inc.</p>
-      <p>Contact : via le formulaire de dépôt d’annonce.</p>
-    </details>
+<footer>
+  <div>© <span id="y"></span> VendsÇa — Tous droits réservés.</div>
+</footer>
 
-    <details id="cgu">
-      <summary>Conditions générales d’utilisation (CGU)</summary>
-      <p>Les annonces doivent être légales, respectueuses et conformes aux lois en vigueur. L’éditeur peut retirer toute
-      annonce inappropriée. En utilisant le site, vous acceptez que vos informations soient traitées pour la gestion
-      des annonces.</p>
-    </details>
+<script>
+  // CONFIG
+  const WHATSAPP_INTL = "33772442452"; // +33 7 72 44 24 52 sans le + ni espaces
 
-    <details id="confidentialite">
-      <summary>Politique de confidentialité</summary>
-      <p>Les données envoyées via le formulaire (Google Forms) sont utilisées uniquement pour traiter votre annonce.
-      Vous pouvez demander la suppression de vos informations en répondant à l’email de confirmation du formulaire.</p>
-    </details>
+  document.getElementById('y').textContent = new Date().getFullYear();
 
-  </main>
+  const form = document.getElementById('adForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const title = document.getElementById('title').value.trim();
+    const price = document.getElementById('price').value.trim();
+    const city  = document.getElementById('city').value.trim();
+    const cat   = document.getElementById('category').value;
+    const seller= document.getElementById('seller').value.trim();
+    const desc  = document.getElementById('desc').value.trim();
 
-  <footer class="wrap" style="border-radius:16px;">
-    <div class="links">
-      <a href="#mentions-legales">Mentions légales</a> •
-      <a href="#cgu">CGU</a> •
-      <a href="#confidentialite">Confidentialité</a>
-    </div>
-    <div class="small">© <span id="y"></span> VendsÇa — Diarra Hamed</div>
-  </footer>
-
-  <script>
-    // année dynamique
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+    const lines = [
+      "🟣 *Nouvelle annonce VendsÇa*",
+      `• Titre : ${title || "-"}`,
+      `• Prix : ${price ? price+" €" : "-"}`,
+      `• Ville : ${city || "-"}`,
+      `• Catégorie : ${cat}`,
+      `• Contact vendeur : ${seller || "-"}`,
+      `• Description : ${desc || "-"}`,
+      "",
+      "(Photos à joindre dans WhatsApp)"
+    ];
+    const text = encodeURIComponent(lines.join("\n"));
+    const url = `https://wa.me/${WHATSAPP_INTL}?text=${text}`;
+    window.location.href = url;
+  });
+</script>
 </body>
 </html>
