@@ -30,7 +30,6 @@
     .cta{ background:var(--orange); color:#fff; border:0; border-radius:999px; padding:12px 18px; font-weight:900; cursor:pointer }
     .ghost{ background:#fff; color:#111; border:2px solid #ddd; border-radius:999px; padding:10px 16px; font-weight:800; text-decoration:none }
     .small{ font-size:13px; color:var(--muted); margin-top:6px }
-    .sep{ height:1px; background:#eee; margin:16px 0 }
   </style>
 </head>
 <body>
@@ -45,8 +44,8 @@
 
   <main class="wrap">
     <div class="card">
-      <h1>Déposer via WhatsApp (recommandé)</h1>
-      <p class="muted">Remplis ces champs puis envoie : WhatsApp s’ouvrira avec un message pré-rempli. Tu pourras ajouter tes photos directement dans WhatsApp.</p>
+      <h1>Déposer via WhatsApp (simple & rapide)</h1>
+      <p class="muted">Remplis ces champs → on ouvre WhatsApp avec un message prêt à envoyer. Tu pourras ajouter tes photos directement dans WhatsApp.</p>
 
       <form id="waForm">
         <div>
@@ -96,15 +95,12 @@
         </div>
         <div class="small">Astuce : après l’ouverture de WhatsApp, joins tes photos avant d’envoyer.</div>
       </form>
-
-      <div class="sep"></div>
-      <p class="small">Tu n’as pas WhatsApp ? Envoie ces infos par mail à <strong>contact.vendsca@gmail.com</strong>.</p>
     </div>
   </main>
 
   <script>
-    // ⚠️ Remplace ce numéro par TON numéro WhatsApp dès que tu as la SIM (format international sans + ni espaces)
- const ADMIN_WHATSAPP = "33772442452";// ex : "2250700000000" pour Côte d’Ivoire
+    // Ton numéro WhatsApp (format international sans + ni espaces)
+    const ADMIN_WHATSAPP = "33772442452";
 
     document.getElementById("waForm").addEventListener("submit", function(e){
       e.preventDefault();
@@ -115,19 +111,19 @@
       const tel = document.getElementById("contact").value.trim();
       const d = document.getElementById("desc").value.trim();
 
-      // Message prérempli
-      const msg =
-`Nouvelle annonce VendsÇa :
-• Titre : ${t}
-• Catégorie : ${c}
-• Prix : ${p ? p + " FCFA" : "—"}
-• Ville : ${v || "—"}
-• Contact vendeur : ${tel}
-• Description : ${d}
+      const lignes = [
+        "Nouvelle annonce VendsÇa :",
+        `• Titre : ${t}`,
+        `• Catégorie : ${c}`,
+        `• Prix : ${p ? p + " FCFA" : "—"}`,
+        `• Ville : ${v || "—"}`,
+        `• Contact vendeur : ${tel}`,
+        `• Description : ${d}`,
+        "",
+        "(Photos à joindre dans WhatsApp)"
+      ];
 
-(Photos à joindre dans WhatsApp)`;
-
-      // Redirection vers WhatsApp
+      const msg = lignes.join("\n");
       const url = "https://wa.me/" + ADMIN_WHATSAPP + "?text=" + encodeURIComponent(msg);
       window.location.href = url;
     });
