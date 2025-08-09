@@ -2,65 +2,62 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VendsÇa - Déposer une annonce</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VendsÇa – Déposer une annonce</title>
+  <meta name="robots" content="noindex, follow" />
   <style>
-    body {
+    body{
+      margin:0;
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
+      background:#f9f9f9;
+      color:#333;
     }
-    header {
-      background-color: orange;
-      color: white;
-      padding: 15px;
-      text-align: center;
-      font-size: 20px;
-      font-weight: bold;
+    .topbar{
+      position:sticky; top:0; z-index:10;
+      display:flex; gap:12px; align-items:center;
+      padding:12px 16px;
+      background:orange; color:#fff;
+      box-shadow:0 2px 8px rgba(0,0,0,.08);
     }
-    nav {
-      background-color: #fff;
-      display: flex;
-      justify-content: space-between;
-      padding: 10px;
-      align-items: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      background:#fff; color:#333;
+      text-decoration:none; font-weight:bold;
+      border:2px solid #fff;
     }
-    nav a {
-      text-decoration: none;
-      font-weight: bold;
-      color: black;
-      background-color: white;
-      border-radius: 20px;
-      padding: 8px 15px;
-      border: 2px solid orange;
+    .btn.cta{
+      background:#ff7f00; color:#fff; border-color:#ff7f00;
     }
-    nav a.cta {
-      background-color: orange;
-      color: white;
+    .wrap{
+      max-width:960px; margin:16px auto; padding:0 16px;
     }
-    iframe {
-      border: none;
-      width: 100%;
-      height: 1800px;
+    iframe{
+      width:100%;
+      height:1800px; /* ajuste si besoin */
+      border:0;
+      background:#fff;
+      border-radius:12px;
+      box-shadow:0 8px 24px rgba(0,0,0,.06);
     }
   </style>
 </head>
 <body>
-
-  <nav>
-    <a href="index.html">← Retour à l'accueil</a>
-    <a href="depot.html" class="cta">Déposer une annonce</a>
+  <nav class="topbar">
+    <a href="index.html" class="btn">← Retour à l’accueil</a>
+    <a href="depot.html" class="btn cta">Déposer une annonce</a>
   </nav>
 
-  <!-- Formulaire Google Forms intégré -->
-  <iframe 
-    src="https://docs.google.com/forms/d/e/1FAIpQLSc7brzvsYej3PvKLG908Gyky1KAah88QNTlBQgGpADuK-HEoA/viewform?embedded=true" 
-    referrerpolicy="no-referrer-when-downgrade" 
-    loading="lazy">
-  </iframe>
-
+  <main class="wrap">
+    <!-- Intégration Google Forms -->
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSc7brzvsYej3PvKLG908Gyky1KAah88QNTlBQgGpADuK-HEoA/viewform?usp=dialog"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      allow="clipboard-write; web-share">
+    </iframe>
+  </main>
 </body>
 </html>
