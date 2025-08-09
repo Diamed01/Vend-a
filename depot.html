@@ -4,95 +4,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>VendsÇa — Déposer une annonce</title>
-  <meta name="description" content="Dépose une annonce en 2 minutes sur VendsÇa. Simple, gratuit et local." />
-  <meta name="robots" content="index,follow">
+  <title>Déposer une annonce – VendsÇa</title>
+  <meta name="description" content="Dépose ton annonce en 1 minute via WhatsApp : simple, rapide et gratuit." />
+  <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#ff7f00" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23ff7f00'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-size='58' font-family='Arial' fill='white'%3E%C3%A7%3C/text%3E%3C/svg%3E">
   <style>
-    :root{
-      --orange:#ff7f00;
-      --bg:#f5f5f7;
-      --text:#222;
-      --white:#fff;
+    :root{ --orange:#ff7f00; --bg:#f9f9fb; --card:#fff; --text:#222; --muted:#666; }
+    *{ box-sizing:border-box }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif }
+    header{ position:sticky; top:0; z-index:10; background:var(--orange); color:#fff; padding:14px 16px; box-shadow:0 2px 8px rgba(0,0,0,.08) }
+    .bar{ max-width:960px; margin:0 auto; display:flex; gap:10px; align-items:center; justify-content:space-between }
+    .btn{ display:inline-flex; align-items:center; gap:8px; text-decoration:none; border-radius:999px; padding:10px 14px; font-weight:800 }
+    .btn.white{ background:#fff; color:#111 }
+    .wrap{ max-width:960px; margin:16px auto; padding:0 12px 28px }
+    .card{ background:var(--card); border-radius:14px; box-shadow:0 8px 24px rgba(0,0,0,.06); padding:16px }
+    h1{ margin:0 0 10px; font-size:22px }
+    .muted{ color:var(--muted); font-size:14px; margin-top:6px }
+    form{ display:grid; gap:12px; margin-top:8px }
+    label{ font-weight:700; font-size:14px }
+    input, textarea, select{
+      width:100%; padding:12px 12px; border:1px solid #ddd; border-radius:10px; font:inherit; background:#fff;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-    /* Top bar */
-    .topbar{
-      position:sticky; top:0; z-index:10;
-      display:flex; gap:.5rem; align-items:center; justify-content:space-between;
-      padding:.75rem; background:var(--orange); color:var(--white);
-      border-bottom:2px solid #e56f00;
-    }
-    .topbar h1{margin:0; font-size:1.1rem; font-weight:800; letter-spacing:.2px}
-    .actions{display:flex; gap:.5rem}
-    .btn{
-      display:inline-flex; align-items:center; gap:.5rem;
-      background:var(--white); color:var(--orange); border:none;
-      padding:.55rem .9rem; border-radius:999px; font-weight:700;
-      text-decoration:none; box-shadow:0 1px 0 rgba(0,0,0,.06);
-    }
-    .btn:active{transform:translateY(1px)}
-    .btn-outline{
-      background:transparent; color:#fff; border:2px solid #fff;
-    }
-
-    .wrap{
-      max-width:900px; margin:1rem auto; padding:0 12px 32px;
-    }
-    .card{
-      background:var(--white); border-radius:16px; padding:10px;
-      box-shadow:0 6px 20px rgba(0,0,0,.06);
-      overflow:hidden;
-    }
-    /* Make iframe responsive */
-    .iframe-wrap{
-      width:100%;
-      min-height:1800px; /* valeur sûre pour Google Forms sur mobile */
-      border:0;
-    }
-
-    .note{
-      text-align:center; color:#666; font-size:.9rem; margin:.75rem 0 0;
-    }
-
-    @media (min-width:768px){
-      .topbar h1{font-size:1.15rem}
-      .btn{font-size:.95rem}
-      .wrap{padding:0 16px 40px}
-      .iframe-wrap{min-height:1600px}
-    }
+    textarea{ min-height:120px; resize:vertical }
+    .actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:6px }
+    .cta{ background:var(--orange); color:#fff; border:0; border-radius:999px; padding:12px 18px; font-weight:900; cursor:pointer }
+    .ghost{ background:#fff; color:#111; border:2px solid #ddd; border-radius:999px; padding:10px 16px; font-weight:800; text-decoration:none }
+    .small{ font-size:13px; color:var(--muted); margin-top:6px }
+    .sep{ height:1px; background:#eee; margin:16px 0 }
   </style>
 </head>
 <body>
 
-  <!-- Barre du haut -->
-  <div class="topbar">
-    <a class="btn btn-outline" href="index.html" aria-label="Retour à l'accueil">← Retour à l’accueil</a>
-    <h1>Déposer une annonce</h1>
-    <div class="actions">
-      <a class="btn" target="_blank" rel="noopener"
-         href="https://docs.google.com/forms/d/e/1FAIpQLSc7brzvsYej3PvKLG908Gyky1KAah88QNTlBQgGpADuK-HEoA/viewform?usp=dialog">
-        Ouvrir le formulaire
-      </a>
+  <header>
+    <div class="bar">
+      <a class="btn white" href="index.html">← Retour à l’accueil</a>
+      <strong>Déposer une annonce</strong>
+      <span style="opacity:0">.</span>
     </div>
-  </div>
+  </header>
 
   <main class="wrap">
     <div class="card">
-      <!-- IFRAME GOOGLE FORMS -->
-      <iframe
-        class="iframe-wrap"
-        src="https://docs.google.com/forms/d/e/1FAIpQLSc7brzvsYej3PvKLG908Gyky1KAah88QNTlBQgGpADuK-HEoA/viewform?embedded=true"
-        title="Formulaire VendsÇa — Déposer une annonce"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        allow="clipboard-write">
-      </iframe>
+      <h1>Déposer via WhatsApp (recommandé)</h1>
+      <p class="muted">Remplis ces champs puis envoie : WhatsApp s’ouvrira avec un message pré-rempli. Tu pourras ajouter tes photos directement dans WhatsApp.</p>
+
+      <form id="waForm">
+        <div>
+          <label for="titre">Titre de l’annonce *</label>
+          <input id="titre" name="titre" type="text" placeholder="Ex: Chaussures Nike neuves" required />
+        </div>
+
+        <div>
+          <label for="categorie">Catégorie</label>
+          <select id="categorie" name="categorie">
+            <option>Mode</option>
+            <option>Électronique</option>
+            <option>Maison</option>
+            <option>Véhicules</option>
+            <option>Services</option>
+            <option>Autres</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="prix">Prix (FCFA)</label>
+          <input id="prix" name="prix" type="number" inputmode="numeric" placeholder="Ex: 15000" />
+        </div>
+
+        <div>
+          <label for="ville">Ville / Quartier</label>
+          <input id="ville" name="ville" type="text" placeholder="Ex: Abidjan, Yopougon" />
+        </div>
+
+        <div>
+          <label for="contact">Ton numéro WhatsApp *</label>
+          <input id="contact" name="contact" type="tel" placeholder="Ex: 0700000000" required />
+          <div class="small">On le mettra dans l’annonce pour que les acheteurs te contactent.</div>
+        </div>
+
+        <div>
+          <label for="desc">Description *</label>
+          <textarea id="desc" name="desc" placeholder="État, taille, couleur, livraison, etc." required></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="cta">📲 Envoyer sur WhatsApp</button>
+          <a class="ghost" target="_blank" rel="noopener"
+             href="https://docs.google.com/forms/d/e/1FAIpQLSc7brzvsYej3PvKLG908Gyky1KAah88QNTlBQgGpADuK-HEoA/viewform?usp=dialog">
+            ou utiliser le Google Form
+          </a>
+        </div>
+        <div class="small">Astuce : après l’ouverture de WhatsApp, joins tes photos avant d’envoyer.</div>
+      </form>
+
+      <div class="sep"></div>
+      <p class="small">Tu n’as pas WhatsApp ? Envoie ces infos par mail à <strong>contact.vendsca@gmail.com</strong>.</p>
     </div>
-    <p class="note">Si le formulaire ne s’affiche pas, utilise le bouton “Ouvrir le formulaire”.</p>
   </main>
+
+  <script>
+    // ⚠️ Remplace ce numéro par TON numéro WhatsApp dès que tu as la SIM (format international sans + ni espaces)
+    const ADMIN_WHATSAPP = "2250700000000"; // ex : "2250700000000" pour Côte d’Ivoire
+
+    document.getElementById("waForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const t = document.getElementById("titre").value.trim();
+      const c = document.getElementById("categorie").value.trim();
+      const p = document.getElementById("prix").value.trim();
+      const v = document.getElementById("ville").value.trim();
+      const tel = document.getElementById("contact").value.trim();
+      const d = document.getElementById("desc").value.trim();
+
+      // Message prérempli
+      const msg =
+`Nouvelle annonce VendsÇa :
+• Titre : ${t}
+• Catégorie : ${c}
+• Prix : ${p ? p + " FCFA" : "—"}
+• Ville : ${v || "—"}
+• Contact vendeur : ${tel}
+• Description : ${d}
+
+(Photos à joindre dans WhatsApp)`;
+
+      // Redirection vers WhatsApp
+      const url = "https://wa.me/" + ADMIN_WHATSAPP + "?text=" + encodeURIComponent(msg);
+      window.location.href = url;
+    });
+  </script>
 
 </body>
 </html>
